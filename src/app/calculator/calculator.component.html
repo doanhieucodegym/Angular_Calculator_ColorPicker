@@ -1,0 +1,19 @@
+<p>Calculator </p>
+<label>
+  <p>One number:</p>
+  <input type="text" (change)="useOne($event.target.value)">
+</label>
+<label>
+  <p>Two number:</p>
+  <input type="text" (change)="useTwo($event.target.value)">
+</label>
+<br>
+<select name="calculator" (change)="onSelectChange($event.target.value)" >
+  <option value="+">Cộng</option>
+  <option value="-">Trừ</option>
+  <option value="*">Nhân</option>
+  <option value="/">Chia</option>
+</select>
+<br>
+<button (click)="calculate()">Tinh</button>
+<p>Ket qua:{{result}}</p>
